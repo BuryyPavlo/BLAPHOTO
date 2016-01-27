@@ -2,7 +2,8 @@
 #define CAMERA_H
 
 
-class Camera{
+class Camera
+{
 private:
     double focalLength;
     double width;

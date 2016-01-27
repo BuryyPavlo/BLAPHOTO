@@ -17,6 +17,7 @@ Camera::~Camera(){
 void Camera::setFocalLength(double inFocalLength){
    focalLength=inFocalLength;
 }
+
 void Camera::setWidth(double inWidth){
    width=inWidth;
 }
@@ -51,5 +52,4 @@ int Camera::getWidthPixel(){
 
 int Camera::getLenghtPixel(){
  return lengthPixel;
-
 }
