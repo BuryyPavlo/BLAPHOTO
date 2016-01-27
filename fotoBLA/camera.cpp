@@ -1,8 +1,12 @@
 #include <camera.h>
 
 
-Camera::Camera(double inFocalLength, double inWidth, double inLength, int inWidthPixel, int inLengthPixe){
-
+Camera::Camera(double inFocalLength, double inWidth, double inLength, double inWidthPixel, double inLengthPixel){
+ focalLength = inFocalLength;
+ width = inWidth;
+ length = inLength;
+ widthPixel = inWidthPixel;
+ lengthPixel = inLengthPixel;
 }
 
 Camera::~Camera(){
@@ -10,40 +14,41 @@ Camera::~Camera(){
 }
 
 void Camera::setFocalLength(double inFocalLength){
-
+   focalLength=inFocalLength;
 }
-void setWidth(double inWidth){
-
-}
-
-void setLength(double inLength){
-length=inLength;
+void Camera::setWidth(double inWidth){
+   width=inWidth;
 }
 
-void setWidthPixel(int inWidthPixel){
-
+void Camera::setLength(double inLength){
+    length=inLength;
 }
 
-void setLengthPixel(int inLengthPixe){
-
+void Camera::setWidthPixel(double inWidthPixel){
+    widthPixel=inWidthPixel;
 }
 
-double getFocalLength(){
-
+void Camera::setLengthPixel(double inLengthPixel){
+    lengthPixel=inLengthPixel;
 }
 
-double getWidth(){
+double Camera::getFocalLength(){
+    return  focalLength;
+};
 
+double Camera::getWidth(){
+    return  width;
 }
 
-double getLenght(){
-
+double Camera::getLenght(){
+ return length;
 }
 
-double getWidthPixel(){
-
+double Camera::getWidthPixel(){
+ return widthPixel;
 }
 
-double getLenghtPixel(){
+double Camera::getLenghtPixel(){
+ return lengthPixel;
 
 }

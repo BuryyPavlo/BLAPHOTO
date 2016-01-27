@@ -1,29 +1,27 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-class Camera
-{
+
+class Camera{
 private:
     double focalLength;
     double width;
     double length;
-    int widthPixel;
-    int lengthPixe;
+    double widthPixel;
+    double lengthPixel;
 public:
-    Camera(double inFocalLength, double inWidth, double inLength, int inWidthPixel, int inLengthPixe);
+    Camera(double inFocalLength, double inWidth, double inLength, double inWidthPixel, double inLengthPixel);
     ~Camera();
     void setFocalLength(double inFocalLength);
     void setWidth(double inWidth);
     void setLength(double inLength);
-    void setWidthPixel(int inWidthPixel);
-    void setLengthPixel(int inLengthPixe);
+    void setWidthPixel(double inWidthPixel);
+    void setLengthPixel(double inLengthPixel);
     double getFocalLength();
     double getWidth();
     double getLenght();
     double getWidthPixel();
     double getLenghtPixel();
-
-
 }
 
 #endif // CAMERA_H
