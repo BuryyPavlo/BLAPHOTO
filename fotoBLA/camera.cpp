@@ -1,7 +1,8 @@
 #include <camera.h>
 
 
-Camera::Camera(double inFocalLength, double inWidth, double inLength, double inWidthPixel, double inLengthPixel){
+Camera::Camera(double inFocalLength, double inWidth, double inLength, int inWidthPixel, int inLengthPixel)
+{
  focalLength = inFocalLength;
  width = inWidth;
  length = inLength;
@@ -24,17 +25,17 @@ void Camera::setLength(double inLength){
     length=inLength;
 }
 
-void Camera::setWidthPixel(double inWidthPixel){
+void Camera::setWidthPixel(int inWidthPixel){
     widthPixel=inWidthPixel;
 }
 
-void Camera::setLengthPixel(double inLengthPixel){
+void Camera::setLengthPixel(int inLengthPixel){
     lengthPixel=inLengthPixel;
 }
 
 double Camera::getFocalLength(){
     return  focalLength;
-};
+}
 
 double Camera::getWidth(){
     return  width;
@@ -44,11 +45,11 @@ double Camera::getLenght(){
  return length;
 }
 
-double Camera::getWidthPixel(){
+int Camera::getWidthPixel(){
  return widthPixel;
 }
 
-double Camera::getLenghtPixel(){
+int Camera::getLenghtPixel(){
  return lengthPixel;
 
 }
