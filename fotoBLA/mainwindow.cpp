@@ -34,15 +34,14 @@ void MainWindow::on_openTxt_clicked()
                                  QMessageBox::Ok);
             return;
         }
-    QTextStream stream(&file);
     QStringList str;
     int numberRows=0;
-    while (!stream.atEnd())
+    while (!file.atEnd())
     {
-        str.append(stream.readLine());
+        str.append(file.readLine());
         numberRows++;
     }
-    QMessageBox::critical(this,"file ", QString::number(numberRows),QMessageBox::Ok);
+    QMessageBox::information(this,"file ", QString::number(numberRows),QMessageBox::Ok);
     int i=0;
     for (i=0; i<=numberRows; i++){
     QMessageBox::information(this,"file ", str.at(i),QMessageBox::Ok);
